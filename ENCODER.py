@@ -201,39 +201,18 @@ while i<len(text):
 # PACK BITS
 # -----------------------
 
-while len(bits)%8!=0:
-    bits+="0"
+while len(bits) % 8 != 0:
+    bits += "0"
 
-data=bytearray()
+data = bytearray()
 
-for i in range(0,len(bits),8):
-    data.append(int(bits[i:i+8],2))
+for i in range(0, len(bits), 8):
+    data.append(int(bits[i:i+8], 2))
 
-path="/storage/emulated/0/Download/text.bin"
+path = "/storage/emulated/0/Download/text.bin"
 
-with open(path,"wb") as f:
+with open(path, "wb") as f:
     f.write(data)
 
-print("Saved:",path)
-print("Size:",len(data),"bytes")[i]],"05b")
-    i+=1
-
-# -----------------------
-# PACK BITS
-# -----------------------
-
-while len(bits)%8!=0:
-    bits+="0"
-
-data=bytearray()
-
-for i in range(0,len(bits),8):
-    data.append(int(bits[i:i+8],2))
-
-path="/storage/emulated/0/Download/text.bin"
-
-with open(path,"wb") as f:
-    f.write(data)
-
-print("Saved:",path)
-print("Size:",len(data),"bytes")
+print("Saved:", path)
+print("Size:", len(data), "bytes")
